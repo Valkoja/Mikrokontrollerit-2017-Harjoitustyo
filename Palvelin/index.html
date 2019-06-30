@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fi">
+  <head>
+    <title>Mikrokontrollerit 2017 harjoitusty&ouml;</title>
+	<meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="functions.js"></script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <h1>Avaimet:</h1>
+      <h1>Tapahtumaloki:</h1>
+      <div id="pinContainer"></div>
+      <div id="logContainer"></div>
+
+      <div class="footer">
+        <input id="newMsgField" type="text" value="" placeholder="Kuvaus" onkeypress="page.submitNewPin(event);" />
+        <input id="newPinField" type="text" value="" placeholder="Avain" maxlength="16" size="16" oninput="page.validateNewPin();" onkeypress="page.submitNewPin(event);" />
+        <input id="newPinButton" type="button" value="Lis&auml;&auml;" onclick="page.addPin();" />
+      </div>
+
+      <div class="footer">
+        <div id="intervalVisual"></div>
+        <input id="intervalButton" type="button" value="Pysäytä" onclick="page.pauseInterval();" />
+        <input id="clearButton" type="button" value="Tyhjennä tapahtumaloki" onclick="page.clearLogs();" />
+      </div>
+    </div>
+  </body>
+</html>
